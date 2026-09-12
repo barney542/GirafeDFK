@@ -1,0 +1,231 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giraffe Surprise</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(#6ecbf5, #dff7ff);
+        }
+
+        /* Top message */
+        #message {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 25px;
+            background: white;
+            border-radius: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Giraffe */
+        #giraffe {
+            position: absolute;
+            width: 150px;
+            height: 260px;
+            display: none;
+            z-index: 5;
+            animation: pop 0.35s ease-out;
+        }
+
+        /* Giraffe body */
+        .body {
+            position: absolute;
+            width: 90px;
+            height: 105px;
+            left: 30px;
+            top: 115px;
+            background: #e6a33a;
+            border: 4px solid #704214;
+            border-radius: 45%;
+        }
+
+        /* Neck */
+        .neck {
+            position: absolute;
+            width: 40px;
+            height: 135px;
+            left: 77px;
+            top: 15px;
+            background: #e6a33a;
+            border: 4px solid #704214;
+            border-radius: 25px;
+        }
+
+        /* Head */
+        .head {
+            position: absolute;
+            width: 75px;
+            height: 58px;
+            left: 60px;
+            top: 0;
+            background: #e6a33a;
+            border: 4px solid #704214;
+            border-radius: 45%;
+        }
+
+        /* Eyes */
+        .eye {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 20px;
+            background: black;
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        .eye1 {
+            left: 75px;
+        }
+
+        .eye2 {
+            left: 105px;
+        }
+
+        /* Nose */
+        .nose {
+            position: absolute;
+            width: 20px;
+            height: 12px;
+            left: 115px;
+            top: 39px;
+            background: #704214;
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        /* Ears */
+        .ear {
+            position: absolute;
+            width: 28px;
+            height: 18px;
+            top: 0;
+            background: #e6a33a;
+            border: 4px solid #704214;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .ear1 {
+            left: 48px;
+            transform: rotate(-30deg);
+        }
+
+        .ear2 {
+            left: 120px;
+            transform: rotate(30deg);
+        }
+
+        /* Horns */
+        .horn {
+            position: absolute;
+            width: 9px;
+            height: 22px;
+            top: -18px;
+            background: #704214;
+            border-radius: 10px;
+            z-index: 4;
+        }
+
+        .horn1 {
+            left: 78px;
+        }
+
+        .horn2 {
+            left: 108px;
+        }
+
+        /* Legs */
+        .leg {
+            position: absolute;
+            width: 17px;
+            height: 65px;
+            top: 200px;
+            background: #e6a33a;
+            border: 4px solid #704214;
+            border-radius: 10px;
+        }
+
+        .leg1 {
+            left: 45px;
+        }
+
+        .leg2 {
+            left: 90px;
+        }
+
+        /* Giraffe spots */
+        .spot {
+            position: absolute;
+            background: #8b541b;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .spot1 {
+            width: 20px;
+            height: 25px;
+            left: 45px;
+            top: 135px;
+        }
+
+        .spot2 {
+            width: 18px;
+            height: 20px;
+            left: 85px;
+            top: 155px;
+        }
+
+        .spot3 {
+            width: 22px;
+            height: 18px;
+            left: 55px;
+            top: 180px;
+        }
+
+        .spot4 {
+            width: 15px;
+            height: 18px;
+            left: 95px;
+            top: 125px;
+        }
+
+        /* Pop animation */
+        @keyframes pop {
+            0% {
+                transform: scale(0) rotate(-15deg);
+            }
+
+            70% {
+                transform: scale(1.15) rotate(5deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        /* Fake virus screen */
+        #virusScreen {
+            display: none;
+            position: fixed;
+            inset: 0;
+```
